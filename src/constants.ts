@@ -1,5 +1,5 @@
-export const extensionId = "VSpaceCode.whichkey";
-export const contributePrefix = "whichkey";
+export const extensionId = "wtf403.whichkeytmux";
+export const contributePrefix = "whichkeytmux";
 export enum ConfigKey {
     Delay = "delay",
     ShowIcons = "showIcons",
@@ -32,9 +32,9 @@ export enum SortOrder {
 }
 
 export enum ContextKey {
-    Active = "whichkeyActive",
-    Visible = "whichkeyVisible",
-    TransientVisible = "transientVisible",
+    Active = "whichkeytmuxActive",
+    Visible = "whichkeytmuxVisible",
+    TransientVisible = "whichkeytmuxTransientVisible",
 }
 
 export const Configs = {

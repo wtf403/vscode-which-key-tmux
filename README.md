@@ -1,30 +1,24 @@
-# vscode-which-key (Preview)
+# VSCode which-key TMUX
 
-[![Docs](https://img.shields.io/website?label=vspacecode.github.io&url=https%3A%2F%2Fvspacecode.github.io)](https://vspacecode.github.io/docs/whichkey)
-[![Version](https://img.shields.io/visual-studio-marketplace/v/vspacecode.whichkey)](https://marketplace.visualstudio.com/items?itemName=vspacecode.whichkey)
-[![Installs](https://img.shields.io/visual-studio-marketplace/i/vspacecode.whichkey)](https://marketplace.visualstudio.com/items?itemName=vspacecode.whichkey)
-[![Ratings](https://img.shields.io/visual-studio-marketplace/r/vspacecode.whichkey)](https://marketplace.visualstudio.com/items?itemName=vspacecode.whichkey)
+ Check original README of [vscode-which-key](https://github.com/VSpaceCode/vscode-which-key/) first
 
-This extension is aimed to provide the standalone which-key function in VScode for both users and extension to bundle.
+Adds TMUX-like keybindings (your need to create `"whichkeytmux.bindings":` and `whichkeytmux.transient` in `settings.json`)  
 
-## Features
+You can add quick open delay with [apc extension](https://github.com/drcika/apc-extension):
 
--   All menu items are customizable
--   The menu key is customizable
--   Extension can bundle this to provide which-key menu
+```json
+"apc.stylesheet": {
+    ".quick-input-widget.show-file-icons": "transition:  opacity steps(1) .4s, display 0s allow-discrete; @starting-style {opacity: 0;}}"
+},
+```
 
-## Documentation
+It's also better to disable tabs in editor groups, close your explorer view, and just use `⌘+P` or Harpoon-like extension for tab management:
 
-See [here](https://vspacecode.github.io/docs/whichkey/).
+```json
+"workbench.editor.showTabs": "single",
+"workbench.editor.limit.enabled": true,
+"workbench.editor.limit.perEditorGroup": true,
+"workbench.editor.limit.value": 1,
+```
 
-## Release Notes
-
-See [CHANGELOG.md](CHANGELOG.md)
-
-## [Contribution](CONTRIBUTING.md)
-
-All feature requests and help are welcome. Please open an issue to track.
-
-## Credits
-
-Thanks @kahole for his implementation of quick pick menu in edamagit.
+You can check my configs here (WIP): <https://github.com/wtf403/.dotfiles/tree/main/vscode>
